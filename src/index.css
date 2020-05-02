@@ -1,13 +1,90 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background: -webkit-linear-gradient(
+    to left,
+    #b2e7ff,
+    #2ca0ff
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to left,
+    #b2e7ff,
+    #2ca0ff
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+select {
+   -webkit-appearance:none;
+   -moz-appearance:none;
+   -ms-appearance:none;
+   appearance:none;
+   outline:0;
+   box-shadow:none;
+   border:0px!important;
+   border-bottom:2px solid rgb(68, 68, 68)!important;
+
+   
+   background: #ffffff;
+   background-image: none;
+   flex: 1;
+   padding: 0 2em;
+   color:rgb(0, 0, 0);
+   cursor:pointer;
+   font-size: 1em;
+   font-family: 'Open Sans', sans-serif;
+}
+select::-ms-expand {
+   display: none;
+}
+.select {
+   position: relative;
+   margin: auto;
+   display: flex;
+   width: auto;
+   height: 3em;
+   line-height: 3;
+   background: #ffffff00;
+   color:rgb(0, 0, 0);
+   overflow: hidden;
+   border-radius: .25em;
+   transition:.25s all ease;
+
+}
+.select::after {
+   content: '\25BC';
+   position: absolute;
+   top: 0;
+   right: 0;
+   padding: 0 1em;
+   background: #ffffff00;
+   cursor:pointer;
+   pointer-events:none;
+   /* border-bottom:2px solid rgb(68, 68, 68)!important; */
+
+   transition:.5s all ease;
+}
+.select:hover::after {
+   transform: rotate(60deg);
+}
+.borderbottominfected{
+   border-bottom: 5px solid red;
+}
+.borderbottomactive{
+   border-bottom: 5px solid blue;
+}
+.borderbottomrecovered{
+   border-bottom: 5px solid green;
+}
+.borderbottomdeaths{
+   border-bottom: 5px solid gray;
+}
+
+
+.countcard{
+   border-top: 0;
+   border-left: 0;
+   border-right: 0;
+   border-radius: 2px;
+}
+.nav-link{
+   background-color: rgba(0, 0, 0, 0.13);
 }
